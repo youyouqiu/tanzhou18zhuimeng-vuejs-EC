@@ -1,16 +1,16 @@
+<!-- 首页组件 -->
+
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <h2>Essential Links</h2>
+    <div class="index">
     </div>
 </template>
 
 <script>
     export default {
-        name: 'HelloWorld',
+        name: 'Index',
         data () {
             return {
-                msg: 'Welcome to Your Vue.js App'
+                
             }
         }
     }
