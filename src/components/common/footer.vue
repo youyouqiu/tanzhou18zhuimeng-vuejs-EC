@@ -2,8 +2,8 @@
 
 <template>
     <div class="footer">
-        <wv-tabbar>
-            <wv-tabbar-item to="/" is-on>
+        <wv-tabbar style="position:fixed; bottom:0;">
+            <wv-tabbar-item :to="{name: 'Index'}" is-on>
                 <span slot="icon" style="display: inline-block; position: relative;">
                     <svg class="icon weui-tabbar__icon" aria-hidden="true">
                         <use xlink:href="#icon-shouye"></use>
@@ -21,7 +21,7 @@
                 </span>   
                     新闻
             </wv-tabbar-item>
-            <wv-tabbar-item to="/">
+            <wv-tabbar-item :to="{name: 'Shop'}">
                 <span slot="icon" style="display: inline-block; position: relative;">
                     <svg class="icon weui-tabbar__icon" aria-hidden="true">
                         <use xlink:href="#icon-gouwuche"></use>
@@ -60,6 +60,10 @@
         vertical-align: -0.15em;
         fill: currentColor;
         overflow: hidden;
+    }
+    .footposition{
+        position: fixed;
+        bottom:0;
     }
 </style>
 
