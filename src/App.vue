@@ -1,4 +1,5 @@
 <!-- 公共入口视图 -->
+<!-- 首页样式与shop页样式有冲突 -->
 
 <!-- html部分 -->
 <template>
@@ -12,6 +13,10 @@
 
 <!-- js部分 -->
 <script>
+    // 导入购物监听
+    import connect from '../static/js/connect.js'
+    import shopTools from '../static/js/shopTools.js'
+
     export default {
         name: 'App',
         data(){
@@ -20,7 +25,7 @@
             }
         },
         created(){
-            // 页面适配方法
+            // 页面适配方法（与首页ui框架样式有冲突）
             // remChange();
             // window.addEventListener('resize', remChange);
             // function remChange(){

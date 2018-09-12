@@ -46,6 +46,7 @@
         },
 
         created(){
+            // 请求后台搜索导航数据
             let url = "https://route.showapi.com/852-1?showapi_appid=74726&showapi_sign=6a69ec9db6584ef8b3bdf810188b77a6";
             url += `&showapi_timestamp=${Date.now()}`;
             const that = this;

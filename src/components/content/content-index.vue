@@ -13,7 +13,7 @@
                     <span slot="label">潭州官网</span>
                 </p>
             </wv-grid-item>
-            <wv-grid-item to="/">
+            <wv-grid-item :to="{name: 'Teacher'}">
                 <div class="weui-grid__icon">
                     <svg class="icon weui-tabbar__icon" aria-hidden="true">
                         <use xlink:href="#icon-huiyuan"></use>
