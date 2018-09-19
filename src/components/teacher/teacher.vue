@@ -15,7 +15,11 @@
                 {{ index + 1 }}---{{ value }}
             </wv-tab>
             <ul class="tabCon showon">
-                <li v-for="(value, index) in manTeacher" :key="index">{{ value.name }}--{{ value.sex }}--{{ value.age }}</li>
+                <li v-for="(value, index) in shopping" :key="index">
+                    <p>{{ value.title }}</p>
+                    <span>{{ value.num }}</span>
+                    <img :src="value.img" alt="value.title">
+                </li>
             </ul>
             <ul class="tabCon show">
                 <li v-for="(value, index) in womanTeacher" :key="index">{{ value.name }}--{{ value.sex }}--{{ value.age }}</li>
@@ -42,6 +46,7 @@
         data () {
             return {
                 title: "潭州金牌教师",
+                shopping: [],
                 tablesTeacher: [
                     "男老师",
                     "女老师",
@@ -105,14 +110,15 @@
             }
         },
         created(){
-            // 请求后台教师数据
-            let url = "https://route.showapi.com/852-1?showapi_appid=74726&showapi_sign=6a69ec9db6584ef8b3bdf810188b77a6";
-            url += `&showapi_timestamp=${Date.now()}`;
+            // 请求后台接口数据
+            let url = "http://localhost:3000/"; // 本地数据库
             const that = this;
             this.$ajax.get(url)
                 .then(res => {
-                    that.res.data;
+                    that.shopping = res.data
+                    console.log(res.data)
                 })
+        
         }
     }
 </script>

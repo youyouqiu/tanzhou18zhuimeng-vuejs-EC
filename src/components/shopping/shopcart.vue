@@ -64,7 +64,6 @@
                 shopList:[]
             }
         },
-
         created (){
             //this.location = city;
             let shop = shopTools.getShop();

@@ -43,7 +43,7 @@
             const that = this;
             this.$ajax.get(url)
                 .then(res => {
-                    that.title = res.data.showapi_res_body.list[0].list[0].name;
+                    console.log("App页：雅蠛蝶，上面的报错提示是因为ajax没有数据");
                 })
         }
     }

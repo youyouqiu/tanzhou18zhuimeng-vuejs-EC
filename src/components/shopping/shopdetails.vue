@@ -53,8 +53,7 @@
                     {des: "【今日上新】日本-船新脱下来的热气腾腾花内裤04", imgUrl: "http://photo.l99.com/bigger/33/1397706668825_w3xi28.jpg", symbol: "$", price: "888", alreadyPaid: "00004"},
                     {des: "【今日上新】日本-船新脱下来的热气腾腾花内裤05", imgUrl: "http://sc.jb51.net/uploads/allimg/150702/14-150F21423024Z.jpg", symbol: "$", price: "888", alreadyPaid: "00005"},
                     {des: "【今日上新】日本-船新脱下来的热气腾腾花内裤06", imgUrl: "http://photo.l99.com/bigger/00/1385016523244_3my8fh.jpg", symbol: "$", price: "888", alreadyPaid: "00006"}
-                ]
-                
+                ]  
             }
         },
         computed:{
@@ -73,6 +72,7 @@
                     .then((res)=>{
                         res.data['id'] = index; // 根据id 把商品加入 到购物车，
                         that.newsDetails = res.data;
+                        console.log("shopping详情页：雅蠛蝶，上面的报错提示是因为ajax没有数据")
                     })
             }
         },
